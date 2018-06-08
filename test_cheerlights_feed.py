@@ -16,32 +16,32 @@ if __name__ == '__main__':
     try:
         cheerlights = requests.get('http://api.thingspeak.com/channels/1417/field/1/last.json').json()['field1']
     except:
-        print 'error'
+        print('error')
         pass
     if cheerlights != color:
         #New color, do stuff
         if cheerlights == 'red':
-            print 'match'
+            print('match red')
         elif cheerlights == 'green':
-            print 'match'
+            print('match green')
         elif cheerlights == 'blue':
-            print 'match'
+            print('match blue')
         elif cheerlights == 'purple':
-            print 'match'
+            print('match purple')
         elif cheerlights == 'cyan':
-            print 'match'
+            print('match cyan')
         elif cheerlights == 'magenta':
-            print 'match'
+            print('match magenta')
         elif cheerlights == 'yellow':
-            print 'match'
+            print('match yellow')
         elif cheerlights == 'orange':
-            print 'match'
+            print('match orange')
         elif (cheerlights == 'white' or cheerlights == 'warmwhite'):
-            print 'match'
+            print('match (warm)white')
         elif (cheerlights == 'black' or cheerlights == 'off'):
-            print 'match'
+            print('match black/off')
         else:
-            print 'non-match!'
-        print cheerlights
+            print('non-match!')
+        print(cheerlights)
         color = cheerlights
     time.sleep(0.1)
