@@ -152,17 +152,17 @@ if __name__ == '__main__':
             if match == True:
                 match = False
                 #theaterChase(strip, newColor)
-                #colorWipe(strip, newColor)
-                print cheerlights
+                colorWipe(strip, newColor)
+                print newColor
 
                 # remove oldest color in history
-                light_history.pop()
+                #light_history.pop()
                 # add new color to top of history
-                light_history.insert(0,newColor)
+                #light_history.insert(0,newColor)
                 # print color list in decimal integer format
                 print light_history
                 # chase the history across the lights
-                historyChase(strip, light_history)
+                #historyChase(strip, light_history)
 
                 color = cheerlights
                 time.sleep(16)
