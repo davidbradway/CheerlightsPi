@@ -1,4 +1,4 @@
 [submodule "rpi_ws281x"]
 	path = rpi_ws281x
-	url = git@github.com:tdicola/rpi_ws281x.git
+	url = git@github.com:jgarff/rpi_ws281x.git
 	ignore = dirty
