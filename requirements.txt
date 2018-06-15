@@ -1,0 +1,3 @@
+requests
+argparse
+rpi_ws281x

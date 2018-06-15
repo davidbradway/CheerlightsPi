@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # Introduce a list for keeping the last three Cheerlight Colors
     light_history = [Color(0, 0, 0),Color(0, 0, 0),Color(0, 0, 0)];
 
-    print 'Press Ctrl-C to quit.'
+    print('Press Ctrl-C to quit.')
     while True:
         # Read the thingspeak feed to get the current color
         try:
@@ -112,7 +112,6 @@ if __name__ == '__main__':
         except:
             pass
         if cheerlights != color:
-            #New color, do stuff
             if cheerlights == 'red':
                 match = True
                 newColor = Color(255, 0, 0)
@@ -148,31 +147,11 @@ if __name__ == '__main__':
                 newColor = Color(0, 0, 0)
             else:
                 match = False
-                print 'non-match!'
             if match == True:
                 match = False
-                #theaterChase(strip, newColor)
                 colorWipe(strip, newColor)
-                print newColor
-
-                # remove oldest color in history
-                #light_history.pop()
-                # add new color to top of history
-                #light_history.insert(0,newColor)
-                # print color list in decimal integer format
-                print light_history
-                # chase the history across the lights
-                #historyChase(strip, light_history)
-
+                print(newColor)
                 color = cheerlights
                 time.sleep(16)
 
-        # Theater chase animations. (Use with above or use randomly)
-        #theaterChase(strip, Color(127, 127, 127))  # White theater chase
-        #theaterChase(strip, Color(127,   0,   0))  # Red theater chase
-        #theaterChase(strip, Color(  0, 127,   0))  # Green theater chase
-        # Rainbow animations.
-        #rainbow(strip)
-        #rainbowCycle(strip)
-        #theaterChaseRainbow(strip)
         time.sleep(0.1)
