@@ -21,25 +21,6 @@ This year, thanks to Tony DiCola's Python wrapper for the the excellent rpi_ws28
 ## Test Library
     sudo python rpi_ws281x/python/examples/strandtest.py 
 
-## Test the cheerlights feed
-    python test_cheerlights_feed.py
-
 ## Usage
-    sudo python cheerlights.py
+    sudo python simples.py [COMMAND]
 
-## (Optional) To remove the script from start-up, run the following command:
-    sudo update-rc.d -f cheerlights.sh remove
-
-## (Optional) commands for service
-    sudo /etc/init.d/cheerlights.sh start
-    sudo /etc/init.d/cheerlights.sh status
-    sudo /etc/init.d/cheerlights.sh stop
-
-## (Optional) Crontab with logging
-    * * * * * /bin/bash /home/pi/repos/CheerlightsPi/autorestart.sh >> /home/pi/myscript.log 2>&1
-
-## (Optional) check the cron log
-    grep CRON /var/log/syslog
-
-## (Optional) or continuously monitor it
-    tail -f /var/log/syslog | grep CRON
