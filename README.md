@@ -22,5 +22,4 @@ This year, thanks to Tony DiCola's Python wrapper for the the excellent rpi_ws28
     sudo python rpi_ws281x/python/examples/strandtest.py 
 
 ## Usage
-    sudo python simples.py [COMMAND]
-
+    sudo python simple.py [COMMAND]
